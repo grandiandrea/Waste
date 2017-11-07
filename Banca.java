@@ -1,23 +1,23 @@
-import java.io.*;
+import java.util.*;
 public class Banca{
 	public static void main(String[] args){
 		Scanner reader = new Scanner(System.in);
-		ContoCorrente conto1;
+		ContoCorrente conto1 = null;
 		while(true){
 			System.out.println("a. Apri conto corrente\n b. Chiudi conto corrente\n c. Fai un prelievo.");
-			char inpt = reader.nextChar();
-			if(inpt == 'a'){
+			String inpt = reader.next();
+			if(inpt.equals("a")){
 				System.out.println("Inserisci nome intestatario");
-				reader.nextChar();
+				reader.next();
 				String intestatario = reader.nextLine();
 				System.out.println("Inserisci saldo iniziale");
 				double saldo = reader.nextDouble();
 				conto1 = new ContoCorrente(saldo,intestatario);
 			}
-			else if(inpt == 'b'){
+			else if(inpt.equals("b")){
 				conto1 = null;
 			}
-			else if(inpt == 'c'){
+			else if(inpt.equals("c")){
 				if(conto1 != null){
 					System.out.println("Quanto vuoi prelevare?");
 					double prel = reader.nextDouble();

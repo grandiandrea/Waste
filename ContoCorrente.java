@@ -1,4 +1,3 @@
-import java.io.*;
 class ContoCorrente{
 	private double saldo = 0;
 	private String intestario = "";
