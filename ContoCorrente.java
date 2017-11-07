@@ -1,3 +1,4 @@
+import java.io.*;
 class ContoCorrente{
 	private double saldo = 0;
 	private String intestario = "";
@@ -8,12 +9,9 @@ class ContoCorrente{
 	public ContoCorrente(){
 
 	}
-	public AperturaConto(double saldo, String intestario){
+	public void AperturaConto(double saldo, String intestario){
 		this.saldo = saldo;
 		this.intestario = intestario;
-	}
-	public ChiusuraConto(){
-		this = null
 	}
 	public void versa(double input){
 		this.saldo+=input;
