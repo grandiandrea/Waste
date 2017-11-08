@@ -24,6 +24,13 @@ public class Banca{
 					conto1.preleva(prel);
 				}
 			}
+			else if(inpt.equals("d")){
+				if(conto1 != null){
+					System.out.println("Quanto vuoi depositare?");
+					double prel = reader.nextDouble();
+					conto1.versa(prel);
+				}
+			}
 		}
 	}
 }
