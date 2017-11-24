@@ -1,6 +1,6 @@
 import static java.lang.Math.PI;
 class Cerchio{
-	private double raggio;
+	protected double raggio;
 	public Cerchio(){
 		this.raggio = 0;
 	}
