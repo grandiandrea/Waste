@@ -1,8 +1,8 @@
 class Rettangolo{
-	private double lato1;
-	private double lato2;
-	private double area;
-	private double perim;
+	protected double lato1;
+	protected double lato2;
+	protected double area;
+	protected double perim;
 	public Rettangolo(double a, double b){
 		this.lato1 = a;
 		this.lato2 = b;
