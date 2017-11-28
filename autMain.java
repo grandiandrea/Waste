@@ -16,12 +16,14 @@ public class autMain{
 		while(true){
 			while(auto1.getVel() < auto1.getVelMax()){
 				System.out.println(auto1.getModello()+" ha accellerato a " +auto1.Accellera(4));
+				try{Thread.sleep(900);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
 			}
-			try{Thread.sleep(1000);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
+			try{Thread.sleep(2000);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
 			while(auto1.getVel() > 0){
 				System.out.println(auto1.getModello()+" ha frenato a " +auto1.frena(4));
+				try{Thread.sleep(900);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
 			}
-			try{Thread.sleep(1000);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
+			try{Thread.sleep(2000);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}
 		}
 
 	}
