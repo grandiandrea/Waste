@@ -14,7 +14,7 @@ public class autMain{
 		int VelMax = reader.nextInt();
 		Automobile auto1 = new Automobile(marca,modello,targa,nPosti,VelMax);
 		while(true){
-			while(auto1.getVel() < auto1.getMaxVel()){
+			while(auto1.getVel() < auto1.getVelMax()){
 				System.out.println(auto1.getModello()+" ha accellerato a " +auto1.Accellera(4));
 			}
 			try{Thread.sleep(1000);} catch(InterruptedException ex) {Thread.currentThread().interrupt();}

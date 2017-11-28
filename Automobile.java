@@ -1,39 +1,38 @@
-class Automobile{
-	private String marca;
-	private String modello;
-	private String targa;
-	private int nPosti;
-	private int VelMax;
-	private int vel;
-	private int posti;
-	public Automobile(String marca, String modello, String targa, int nPosti, int VelMax){
-		this.marca = marca;
-		this.modello = modello;
+class Automobile extends Veicolo{
+	protected String targa;
+	protected int nPosti;
+	protected int posti;
+	public Automobile(){
+		super();
+		this.targa = "";
+		this.nPosti = 0;
+	}
+	public Automobile(String marca, String modello, String targa, int nPosti, int velMax){
+		super(marca, modello, velMax);
 		this.targa = targa;
 		this.nPosti = nPosti;
-		this.VelMax = VelMax;
 	}
-	public int Accellera(int inpt){
-		if(vel < VelMax){
-			if(vel+inpt > VelMax){
-				vel = VelMax;
+	public double Accellera(double inpt){
+		if(super.vel < super.velMax){
+			if(super.vel+inpt > super.velMax){
+				super.vel = super.velMax;
 			}
 			else{
-				vel+= inpt;
+				super.vel+= inpt;
 			}
 		}
-		return vel;
+		return super.vel;
 	}
-	public int frena(int inpt){
-		if(vel > 0){
-			if(vel-inpt > 0){
-				vel-= inpt;
+	public double frena(double inpt){
+		if(super.vel > 0){
+			if(super.vel-inpt > 0){
+				super.vel-= inpt;
 			}
 			else{
-				vel = 0;
+				super.vel = 0;
 			}
 		}
-		return vel;
+		return super.vel;
 	}
 	public int caricaPersone(int inpt){
 		if(posti +inpt <= nPosti){
@@ -50,21 +49,6 @@ class Automobile{
 		}
 		System.out.println("Ci sono "+posti+" persone a bordo");
 		return posti;
-	}
-	public int getVel(){
-		return vel;
-	}
-	public int getMaxVel(){
-		return VelMax;
-	}
-	public String getModello(){
-		return modello;
-	}
-	public void setVel(int inpt){
-		vel = inpt;
-	}
-	public void setModello(String inpt){
-		modello = inpt;
 	}
 	public String getTarga(){
 		return this.targa;
