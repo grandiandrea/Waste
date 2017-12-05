@@ -1,9 +1,11 @@
 class ContoCorrente{
-	private double saldo = 0;
-	private String intestario = "";
-	public ContoCorrente(double saldo, String intestario){
+	protected double saldo = 0;
+	protected String intestario = "";
+	protected String nConto;
+	public ContoCorrente(double saldo, String intestario, String nConto){
 		this.saldo = saldo;
 		this.intestario = intestario;
+		this.nConto = nConto;
 	}
 	public ContoCorrente(){
 
@@ -21,12 +23,15 @@ class ContoCorrente{
 			return true;
 		}
 		else{
-			System.out.println("Errore");
+			System.out.println("Errore, saldo insufficente");
 			return false;
 		}
 	}
 	public double getSaldo(){
 		return this.saldo;
+	}
+	public String getNConto(){
+		return this.nConto;
 	}
 	public void printSaldo(){
 		System.out.println(this.saldo);
