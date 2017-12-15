@@ -1,5 +1,5 @@
 public class Paral extends Rettangolo{
-	double h;
+	protected double h;
 	public Paral(){
 
 	}
@@ -7,7 +7,7 @@ public class Paral extends Rettangolo{
 		super(l1,l2);
 		this.h = h;
 	}
-	public double volumeCalc(){
-		return areaCalc() * this.h;
+	public double volume(){
+		return super.area() * this.h;
 	}
 }

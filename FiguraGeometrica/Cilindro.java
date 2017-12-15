@@ -7,8 +7,8 @@ public class Cilindro extends Cerchio{
 		super(r);
 		this.h = h;
 	}
-	public double volumeCalc(){
-		return (super.areaCalc() * this.h);
+	public double volume(){
+		return (super.area() * this.h);
 	}
 
 }
