@@ -2,7 +2,10 @@ import java.util.*;
 public class Main{
 	public static void main(String[] args){
 		Scanner inp = new Scanner(System.in);
-		while(true){
+		boolean exec = true;
+		while(exec){
+			System.out.println("... Premere un tasto per continuare");
+			inp.next();
 			System.out.println("	MENU CALCOLATORE GEOMETRICO");
 			System.out.println(" Oggetti disponibili da FigureGeometriche:");
 			System.out.println(" 1. Rettangolo");
@@ -10,6 +13,7 @@ public class Main{
 			System.out.println(" 2. Cerchio");
 			System.out.println("  2a. Cilindro");
 			System.out.println(" 3. Trapezio");
+			System.out.println("		4. Chiudi programma");
 			String selector = inp.next();
 			if(selector.equals("1")){
 				System.out.print("Inserisci i 2 lati>");
@@ -35,6 +39,9 @@ public class Main{
 				System.out.print("Inserisci Base maggiore, base minore ed altezza>");
 				Trapezio trapezio = new Trapezio(inp.nextDouble(), inp.nextDouble(), inp.nextDouble());
 				System.out.println("Area = "+trapezio.area() +" Perimetro = "+trapezio.perimetro());
+			}
+			else if(selector.equals("4")){
+				exec = false;
 			}
 		}
 	}
