@@ -6,15 +6,16 @@ public class Main{
 		while(exec){
 			System.out.println("... Premere un tasto per continuare");
 			inp.next();
-			System.out.println("	MENU CALCOLATORE GEOMETRICO");
+			System.out.println("\n\n\n	MENU CALCOLATORE GEOMETRICO");
 			System.out.println(" Oggetti disponibili da FigureGeometriche:");
 			System.out.println(" 1. Rettangolo");
 			System.out.println("  1a. Parallelepipedo");
 			System.out.println(" 2. Cerchio");
 			System.out.println("  2a. Cilindro");
 			System.out.println(" 3. Trapezio");
-			System.out.println("		4. Chiudi programma");
+			System.out.println(" 4. Chiudi programma");
 			String selector = inp.next();
+			System.out.println("\n\n Avvio risoluzione..\n\n");
 			if(selector.equals("1")){
 				System.out.print("Inserisci i 2 lati>");
 				Rettangolo rettangolo = new Rettangolo(inp.nextDouble(),inp.nextDouble());
