@@ -3,7 +3,7 @@ public class ContoBase extends ContoCorrente{
 	public ContoBase(){
 
 	}
-	public ContoBase(double saldo, String nome, string cognome, String nConto, double maxPrelievo){
+	public ContoBase(double saldo, String nome, String cognome, int nConto, double maxPrelievo){
 		super.saldo = saldo;
 		super.nome = nome;
 		super.cognome = cognome;
@@ -11,11 +11,12 @@ public class ContoBase extends ContoCorrente{
 		this.maxPrelievo = maxPrelievo;
 	}
 	public boolean preleva(double amount){
-		if(amount <= this.maxPrelievo){
-			return super.preleva(amount);
+		if(amount <= this.maxPrelievo && (saldo-amount) >= 0){
+			saldo -= maxPrelievo;
+			return true;
 		}
 		else{
-			System.out.println("	Ammontare superiore al prelievo massimo");
+			System.out.println("	Errore prelievo");
 			return false;
 		}
 	}

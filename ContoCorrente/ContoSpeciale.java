@@ -1,9 +1,9 @@
-public class ContoSpeciale{
+public class ContoSpeciale extends ContoCorrente{
 	protected double maxRosso;
 	public ContoSpeciale(){
 
 	}
-	public ContoSpeciale(double saldo, String nome,String cognome, String nConto, double maxRosso){
+	public ContoSpeciale(double saldo, String nome,String cognome, int nConto, double maxRosso){
 		super.saldo = saldo;
 		super.nome = nome;
 		super.cognome = cognome;

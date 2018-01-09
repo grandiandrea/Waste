@@ -1,9 +1,9 @@
-abstract public class ContoCorrente{
-	String nome;
-	String cognome;
-	int nConto;
-	double saldo;
-	abstract public boolean preleva(double amount);
+public abstract class ContoCorrente{
+	protected String nome;
+	protected String cognome;
+	protected int nConto;
+	protected double saldo;
+	public abstract boolean preleva(double amount);
 	public void versa(double amount){
 		this.saldo += amount;
 	}
