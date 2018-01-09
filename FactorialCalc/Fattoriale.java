@@ -7,24 +7,17 @@ public class Fattoriale{
 	}
 	public Fattoriale(double input){
 		this.input = input;
-		initCalc(this.input);
-	}
-	public double initCalc(double input){
-		this.risultato = input;
-		return Calculate(this.risultato -1);
-	}
-	/*
-	Must multiply the given number by (givennumber-1) until givennumber is 1. Then it must stop.
-	TODO: recursive application
-	*/
+		this.risultato = Calculate(this.input);
+	}	
 	public double Calculate(double input){
-		if(input != 1){
-			this.risultato = this.risultato * input-1;
-			return Calculate(input-1);
+		if(input > 1){
+			//System.out.println("input = "+input);
+			return input * Calculate(input-1);
 		}
 		else{
-			return this.risultato;
+			return 1;
 		}
+
 	}
 	public double getRisultato(){
 		return this.risultato;
