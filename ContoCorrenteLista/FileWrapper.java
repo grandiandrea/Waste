@@ -1,3 +1,4 @@
+import java.util.Date;
 public class FileWrapper{
 	int nconto; 
 	String nome;
