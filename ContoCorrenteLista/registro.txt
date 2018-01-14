@@ -1,1 +1,7 @@
- 
+224 Andrea Grandi Prelievo 10.0 19:24:747_13-Jan-2018
+224 Andrea Grandi Versamento 1000.0 19:24:643_13-Jan-2018
+674 Andrea Grandi Versamento 93.0 19:27:469_13-Jan-2018
+674 Andrea Grandi Prelievo 100.0 19:27:250_13-Jan-2018
+674 Andrea Grandi Prelievo 93.213 19:28:655_13-Jan-2018
+693 Giovanni Rana Prelievo 99.0 20:19:475_13-Jan-2018
+512 A G Versamento 10.0 20:20:685_13-Jan-2018

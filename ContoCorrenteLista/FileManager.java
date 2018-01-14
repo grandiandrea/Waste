@@ -8,63 +8,57 @@ import java.nio.charset.Charset;
 import java.nio.channels.FileChannel;
 import java.lang.*;
 import java.text.SimpleDateFormat;
+/*
+	TODO
+	create register list on constructor, and add to list.
+	when closing, write list to file and close filewriters.
+*/
 public class FileManager{
-	Path buffer;
 	Path registro;
 	SimpleDateFormat formato;
+	String registrol;
+	List<FileWrapper> content;
 	public FileManager(){
-		this.buffer = Paths.get("buffer.txt");
-		this.registro = Paths.get("registro.txt");
+		this.registrol = "registro.txt";
+		this.registro = Paths.get(registrol);
+		content = new ArrayList<>();
 		formato = new SimpleDateFormat("HH:mm:SS_dd-MMM-yyyy");
-	}
-	public boolean addToWrite(FileWrapper contenuto) throws IOException{
 		try{
 			Scanner s = new Scanner(new File("registro.txt"));
-			List<FileWrapper> inContent = new ArrayList<>();
 			while(s.hasNextLine()){
-				String[] linea = s.nextLine().split(" ");
-				inContent.add(new FileWrapper(Integer.parseInt(linea[0]),linea[1],linea[2],linea[3],Double.parseDouble(linea[4]),formato.parse(linea[5])));
+				content.add(new FileWrapper(s.nextLine()));
 			}
-			s.close();
-			inContent.add(contenuto);
-			List<String> outContent = new ArrayList<>();	
-			for(FileWrapper iter : inContent){
-				outContent.add(Integer.toString(iter.nconto)+" "+iter.nome+" "+iter.cognome+" "+iter.operazione+" "+Double.toString(iter.amount)+" "+formato.format(iter.data));
+		}catch(FileNotFoundException ex){
+
+		}	
+
+	}
+	public void addToWrite(FileWrapper contenuto){
+		content.add(contenuto);
+	}
+	public boolean write() {
+		try{
+			List<String> contentString = new ArrayList<>();
+			for(FileWrapper iter : content){
+				contentString.add(iter.toString());
 			}
-			Files.write(buffer, outContent, Charset.forName("UTF-8"));
-			File infile = new File("buffer");
-			File outfile = new File("registro");
-			FileChannel src = new FileInputStream(infile).getChannel();
-			FileChannel dest = new FileOutputStream(outfile).getChannel();
-			dest.transferFrom(src,0,src.size());
+			Files.write(registro, contentString, Charset.forName("UTF-8"));
 			//File read	V
 			//To Strig parsing
 			//To int
 			//Parse to new list to string array
 		}catch(FileNotFoundException ex){
 
-		}catch(ParseException e){
+		}catch(IOException exe){
 
 		}
 
 		
 		return true;
 	}
-	public List<FileWrapper> getRegistro(){
-		List<FileWrapper> content = new ArrayList<>();
-		try{
-			Scanner s = new Scanner(new File("registro"));
-			
-			while(s.hasNextLine()){
-				String[] linea = s.nextLine().split(" ");
-				content.add(new FileWrapper(Integer.parseInt(linea[0]),linea[1],linea[2],linea[3],Double.parseDouble(linea[4]),formato.parse(linea[5])));
-			}
-			s.close();
-		}catch(FileNotFoundException ex){
-
-		}catch(ParseException e){
-			
+	public void printRegistro(){
+		for(FileWrapper iter : content){
+			System.out.println(iter.toString());
 		}
-		return content;
 	}
 }
