@@ -5,3 +5,8 @@
 674 Andrea Grandi Prelievo 93.213 19:28:655_13-Jan-2018
 693 Giovanni Rana Prelievo 99.0 20:19:475_13-Jan-2018
 512 A G Versamento 10.0 20:20:685_13-Jan-2018
+524 Giovanni Rana Prelievo 112.24 15:56:481_14-Jan-2018
+524 Giovanni Rana Prelievo 1111.0 15:56:999_14-Jan-2018
+524 Giovanni Rana Versamento 100.0 15:56:396_14-Jan-2018
+524 Giovanni Rana Versamento 96.12 15:56:416_14-Jan-2018
+482 Silvia Tarallo Prelievo 100.0 12:59:50_15-Jan-2018
