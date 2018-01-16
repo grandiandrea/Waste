@@ -7,7 +7,7 @@ class Automobile extends Veicolo{
 		this.targa = "";
 		this.nPosti = 0;
 	}
-	public Automobile(String marca, String modello, String targa, int nPosti, int velMax){
+	public Automobile(String marca, String modello, String targa, int nPosti, double velMax){
 		super(marca, modello, velMax);
 		this.targa = targa;
 		this.nPosti = nPosti;
@@ -52,6 +52,9 @@ class Automobile extends Veicolo{
 	}
 	public String getTarga(){
 		return this.targa;
+	}
+	public String toString(){
+		return "Marca: "+marca+" "+"Modello: "+modello+" "+"Targa: "+targa+" "+"Numero Posti: "+Integer.toString(nPosti)+" "+"Velocita' Massima: "+Double.toString(velMax);
 	}
 	public boolean equals(Automobile altro){
 		return ( this.targa.equals(altro.getTarga()) );
