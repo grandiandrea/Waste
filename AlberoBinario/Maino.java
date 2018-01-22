@@ -7,5 +7,6 @@ public class Maino{
 			a1.add(new Nodo(sc.nextDouble()));
 		}
 		System.out.println(a1.toString());
+		a1.print(3);
 	}
 }
