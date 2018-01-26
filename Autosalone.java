@@ -7,8 +7,8 @@ public class Autosalone{
   public void aggiungi(Automobile daAggiungere){
     salone.add(daAggiungere);
   }
-  public boolean rimuovi(Automobile daRimuovere){
-    return salone.remove(cercaAuto(daRimuovere));
+  public void rimuovi(Automobile daRimuovere){
+    salone.remove(cercaAuto(daRimuovere));
 
   }
   public void visualizza(){
@@ -16,10 +16,20 @@ public class Autosalone{
       System.out.println(iter.toString());
     }
   }
-  public int cercaAuto(Automobile){
+  public void sort(){
+    Collections.sort(salone, new Comparator<Automobile>() {
+        @Override
+        public int compare(Automobile auto1, Automobile auto2)
+        {
+
+            return  auto1.compareTo(auto2);
+        }
+    });
+  }
+  public int cercaAuto(Automobile daCercare){
 		for(Automobile iter : salone){
-			if(iter.equals(Automobile)){
-				return lis.indexOf(iter);
+			if(iter.equals(daCercare)){
+				return salone.indexOf(iter);
 			}
 		}
 		return 0;

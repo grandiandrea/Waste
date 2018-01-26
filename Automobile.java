@@ -59,6 +59,9 @@ class Automobile extends Veicolo{
 	public boolean equals(Automobile altro){
 		return ( this.targa.equals(altro.getTarga()) );
 	}
+	public int compareTo(Automobile altro){
+		return ( this.targa.compareTo(altro.getTarga()) );
+	}
 
 
 }
