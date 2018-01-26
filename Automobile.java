@@ -60,7 +60,10 @@ class Automobile extends Veicolo{
 		return ( this.targa.equals(altro.getTarga()) );
 	}
 	public int compareTo(Automobile altro){
-		return ( this.targa.compareTo(altro.getTarga()) );
+		if(this.nPosti > altro.nPosti)
+		 	return 10;
+		else
+			return 0;
 	}
 
 
