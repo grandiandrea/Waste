@@ -24,7 +24,7 @@ public class Autosalone{
     }
   }
   public void sort(){
-    Collections.sort(salone, new Automobile());
+    Collections.sort(salone, new AutomobileComparator());
   }
   public Automobile get(int index){
     return salone.get(index);

@@ -1,5 +1,5 @@
 import java.util.*;
-class Automobile extends Veicolo implements Comparator<Automobile>, Comparable<Automobile> {
+class Automobile extends Veicolo{
 	protected String targa;
 	protected int nPosti;
 	protected int posti;
@@ -60,12 +60,4 @@ class Automobile extends Veicolo implements Comparator<Automobile>, Comparable<A
 	public boolean equals(Automobile altro){
 		return ( this.targa.equals(altro.getTarga()) );
 	}
-	public int compareTo(Automobile d) {
-  	return (super.marca).compareTo(d.marca);
-  }
-	public int compare(Automobile a1, Automobile a2){
-		return (int)a1.velMax - (int)a2.velMax;
-	}
-
-
 }
