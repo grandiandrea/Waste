@@ -24,14 +24,7 @@ public class Autosalone{
     }
   }
   public void sort(){
-    Collections.sort(salone, new Comparator<Automobile>() {
-        @Override
-        public int compare(Automobile auto1, Automobile auto2)
-        {
-
-            return  auto1.compareTo(auto2);
-        }
-    });
+    Collections.sort(salone, new Automobile());
   }
   public Automobile get(int index){
     return salone.get(index);

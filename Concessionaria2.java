@@ -5,7 +5,7 @@ public class Concessionaria2{
 		Scanner reader = new Scanner(System.in);
 		boolean loop = true;
 		while(loop){
-			System.out.println("1. Aggiungi nuova auto\n2. Rimuovi auto\n3. Cerca auto\n4. Elenca auto\n5. Vendi auto\n6. Elenca auto vendute\n7. Riordina in modo lexicografico per targa");
+			System.out.println("1. Aggiungi nuova auto\n2. Rimuovi auto\n3. Cerca auto\n4. Elenca auto\n5. Vendi auto\n6. Elenca auto vendute\n7. Riordina per velocita`");
 			int inpt = reader.nextInt();
 			switch(inpt){
 				case 1:
