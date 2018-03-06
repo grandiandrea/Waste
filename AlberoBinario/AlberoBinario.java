@@ -9,6 +9,19 @@ public class AlberoBinario{
 		size++;
 		return root.addBranch(son);
 	}
+	public void delete(int valore){
+		Nodo daEliminare = this.search(valore);
+		Nodo maggiore = null;
+		Nodo minore = null;
+		if(daEliminare.maggiore != null)
+			maggiore = daEliminare.maggiore;
+		if(daEliminare.minore != null)
+			minore = daEliminare.minore;
+		size--;
+		daEliminare = null;
+		this.add(maggiore);
+		this.add(minore);
+	}
 	public String toString(){
 		return root.findMinor(root);
 	}
@@ -42,10 +55,14 @@ public class AlberoBinario{
 	}
 	public Nodo searching(Nodo radice, double valore){
 		if(valore > radice.getValore()){
-			return searching(radice.getMinore(), valore);
+			if(radice.getMinore() != null)
+				return searching(radice.getMinore(), valore);
+			else return null;
 		}
 		else if(valore < radice.getValore()){
-			return searching(radice.getMaggiore(), valore);
+			if(radice.getMaggiore() != null)
+				return searching(radice.getMaggiore(), valore);
+			else return null;
 		}
 		else{
 			return radice;

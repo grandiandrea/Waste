@@ -8,5 +8,7 @@ public class Maino{
 		}
 		System.out.println(a1.toString());
 		a1.print(3);
+		a1.delete(sc.nextInt());
+		a1.print(3);
 	}
 }
