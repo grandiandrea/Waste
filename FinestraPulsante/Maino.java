@@ -19,7 +19,7 @@ public class Maino{
     JFrame guiFrame = new JFrame();
     guiFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		guiFrame.setTitle("Finestra con pulsante");
-		guiFrame.setSize(650,680);
+		guiFrame.setSize(650,200);
 		guiFrame.setLocationRelativeTo(null);
     JPanel pannello = new JPanel();
     JButton bottone1 = new JButton("Bottone1");
